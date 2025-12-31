@@ -1,4 +1,4 @@
-# OpenSCAP Utilities
+# Compliance Profile Builder
 
 ![shellcheck workflow](https://github.com/straysheep-dev/compliance-profile-builder/actions/workflows/shellcheck.yml/badge.svg)
 
