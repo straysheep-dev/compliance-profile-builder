@@ -22,6 +22,8 @@ The `parse-tags.sh` wrapper script is written to interpret posix-extended regex.
 ./parse-tags.sh 'ubuntu.*(cis.*2.*server|stig)'
 ```
 
+This drops all `txt` files into the project root.
+
 5. Go through any of the tag files, and comment out any tags you don't want to apply. Usually `tags-all.txt` is the file to edit here, but tag lists are created for numerous categories.
 
 ```md
