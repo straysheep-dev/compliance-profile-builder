@@ -5,6 +5,8 @@
 # This script parses all tag lists, and creates csv files ready-to-use
 # with ansible-playbook by ignoring all commented lines.
 
+# shellcheck disable=SC2126,SC2086
+
 TAGS_LIST=$(find ../ -maxdepth 2 -name "tags-*.txt" | awk -F'/' '{print $3}')
 
 CreateCSV() {

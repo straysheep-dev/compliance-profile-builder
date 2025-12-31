@@ -1,6 +1,9 @@
 # OpenSCAP Utilities
 
-Scripts and files to apply OpenSCAP policies using Ansible tags.
+Scripts and files to easily create, test, and apply customized OpenSCAP policies using Ansible tags.
+
+- [https://github.com/ComplianceAsCode/content](https://github.com/ComplianceAsCode/content)
+- [https://complianceascode.readthedocs.io/en/latest/](https://complianceascode.readthedocs.io/en/latest/)
 
 > [!IMPORTANT]
 > This should be used as **one** method to get your systems into a desired state. Some policy rules do not have Ansible tasks for them, and will need manually applied via a shell script. Additionally, not all tags are sorted and grouped out of each policy. This is why the `tags-all.txt` file is created, so you can add anything that's missing. Identify these items with the `oscap` scanner.*
