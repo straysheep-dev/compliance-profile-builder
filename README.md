@@ -1,6 +1,6 @@
 # OpenSCAP Utilities
 
-![shellcheck workflow](https://github.com/straysheep-dev/linux-configs/actions/workflows/shellcheck.yml/badge.svg)
+![shellcheck workflow](https://github.com/straysheep-dev/compliance-profile-builder/actions/workflows/shellcheck.yml/badge.svg)
 
 Scripts and files to easily create, test, and apply customized OpenSCAP policies using Ansible tags.
 
