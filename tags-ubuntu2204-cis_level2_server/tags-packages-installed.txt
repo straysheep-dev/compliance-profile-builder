@@ -1,0 +1,9 @@
+#package_aide_installed
+package_apparmor_installed
+#package_audit_installed
+package_iptables_installed
+package_nftables_installed
+package_rsyslog_installed
+package_sudo_installed
+package_systemd-journal-remote_installed
+package_timesyncd_installed

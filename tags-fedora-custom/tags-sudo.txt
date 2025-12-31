@@ -1,0 +1,4 @@
+sudo_add_use_pty
+sudo_custom_logfile
+sudo_require_authentication
+sudo_require_reauthentication

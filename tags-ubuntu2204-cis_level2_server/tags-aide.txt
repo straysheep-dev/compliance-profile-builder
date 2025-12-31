@@ -1,0 +1,3 @@
+#aide_build_database
+#aide_check_audit_tools
+#aide_periodic_cron_checking

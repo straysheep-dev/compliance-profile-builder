@@ -1,0 +1,5 @@
+service_debug-shell_disabled
+service_nfs_disabled
+service_nftables_disabled
+service_rpcbind_disabled
+service_systemd-coredump_disabled

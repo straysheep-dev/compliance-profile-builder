@@ -1,0 +1,4 @@
+service_apport_disabled
+service_autofs_disabled
+service_avahi-daemon_disabled
+service_cups_disabled

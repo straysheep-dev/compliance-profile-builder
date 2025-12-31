@@ -1,0 +1,17 @@
+#configure_strategy
+#disable_strategy
+#enable_strategy
+#restrict_strategy
+#unknown_severity
+#unknown_strategy
+
+#low_complexity
+#low_disruption
+#low_severity
+
+#medium_complexity
+#medium_disruption
+#medium_severity
+
+#high_disruption
+#high_severity

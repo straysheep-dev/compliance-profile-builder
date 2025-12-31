@@ -1,0 +1,9 @@
+#service_auditd_enabled
+service_chronyd_enabled
+service_cron_enabled
+#service_nftables_enabled
+service_ntp_enabled
+service_rsyslog_enabled
+service_systemd-journald_enabled
+service_timesyncd_enabled
+service_ufw_enabled

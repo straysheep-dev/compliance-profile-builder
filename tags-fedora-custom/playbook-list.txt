@@ -1,0 +1,4 @@
+fedora-playbook-cusp_fedora.yml
+fedora-playbook-ospp.yml
+fedora-playbook-pci-dss.yml
+fedora-playbook-standard.yml
