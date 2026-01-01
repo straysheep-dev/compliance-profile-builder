@@ -55,6 +55,9 @@ accounts_password_pam_unix_remember
 > If you're finding tasks executing that you don't think should, check the assigned tags to that task in the relevant playbook.
 
 ```bash
+# If the playbook is older, you may need to ALLOW_BROKEN_CONDITIONALS
+export ANSIBLE_ALLOW_BROKEN_CONDITIONALS='True'
+
 # Check -C on localhost
 ansible-playbook -i "localhost," -c local -b --ask-become-pass -t "$(cat tags-all.csv)" -C ./scap-security-guide-0.1.79/ansible/ubuntu2404-playbook-cis_level2_workstation.yml
 ```
@@ -62,9 +65,34 @@ ansible-playbook -i "localhost," -c local -b --ask-become-pass -t "$(cat tags-al
 8. Execute Ansible against one or more of the playbooks used to build the tag list.
 
 ```bash
+# If the playbook is older, you may need to ALLOW_BROKEN_CONDITIONALS
+export ANSIBLE_ALLOW_BROKEN_CONDITIONALS='True'
+
 # Run on localhost
 ansible-playbook -i "localhost," -c local -b --ask-become-pass -t "$(cat tags-all.csv)" ./scap-security-guide-0.1.79/ansible/ubuntu2404-playbook-cis_level2_workstation.yml
 ```
 
 > [!TIP]
 > There are also folders in the same directory of premade tag sets that will apply as many rules as possible without breaking a system, exceptions being `aide` and `auditd` rules. The reason being these rules often endlessly loop, need tuned to your environment, or break the deployment. Use the [`aide`](https://github.com/straysheep-dev/ansible-configs/tree/main/aide) and [`install_auditd`](https://github.com/straysheep-dev/ansible-configs/tree/main/install_auditd) roles instead.
+
+---
+
+## Scan
+
+> [!TIP]
+> On Rocky Linux, you may want to scan and remediate using the built-in profiles from the `scap-security-guide` dnf package. The [ComplianceAsCode/content](https://github.com/ComplianceAsCode/content) release files do not ship with Rocky Linux data by default (at the time of writing). However, the RHEL playbooks are in theory compatible with Rocky Linux. You can use the `ComplianceAsCode/content` files to generate tags, test the playbook, and apply it using RHEL's data. This may be necessary if the `ComplianceAsCode/content` has upstream bug fixes which the `scap-security-guide` package doesn't have yet.
+>
+> For example, on Rocky Linux 10:
+> - `/usr/share/xml/scap/ssg/content/ssg-rl10-ds.xml`
+> - `/usr/share/scap-security-guide/ansible/rl10-playbook-cis_workstation_l2.yml`
+
+To scan a machine for compliance:
+
+```bash
+# Scan localhost
+./scan.sh localhost xccdf_org.ssgproject.content_profile_cis_workstation_l2 scap-security-guide-0.1.79/ssg-fedora-ds.xml
+
+# Scan a remote target
+./scan.sh 'user@192.168.10.4 22' xccdf_org.ssgproject.content_profile_cis_workstation_l2 scap-security-guide-0.1.79/ssg-fedora-ds.xml
+
+```
