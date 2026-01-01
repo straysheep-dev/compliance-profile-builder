@@ -9,8 +9,9 @@
 # rate.
 
 meta_tags='^always$
-^aide_.*$
+^.*aide_.*$
 ^audit_.*$
+^CCE-.*$
 ^CJIS-.*$
 ^.*_strategy$
 ^DISA-.*$

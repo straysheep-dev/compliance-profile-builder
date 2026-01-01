@@ -206,4 +206,4 @@ print_line_count() {
 print_line_count | column -t
 
 # Automatically comment tags-all.txt
-sed -i 's/^/#/g' tags-all.txt
+#sed -i 's/^/#/g' tags-all.txt
