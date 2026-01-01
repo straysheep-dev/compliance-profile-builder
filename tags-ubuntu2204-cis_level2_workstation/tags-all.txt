@@ -535,7 +535,7 @@ package_pam_runtime_installed
 package_prelink_removed
 package_rpcbind_removed
 package_rsh_removed
-package_rsync_removed
+#package_rsync_removed
 package_rsyslog_installed
 package_samba_removed
 package_squid_removed
