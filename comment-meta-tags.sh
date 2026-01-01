@@ -13,6 +13,7 @@ meta_tags='^always$
 ^audit_.*$
 ^CCE-.*$
 ^CJIS-.*$
+^.*configure_.*$
 ^.*_strategy$
 ^DISA-.*$
 ^high_.*$
